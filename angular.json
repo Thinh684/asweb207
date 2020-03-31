@@ -23,10 +23,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/app/css/boostrap.min.css",
-              "src/app/css/css.css",
-              "src/app/css/font-awesome.min.css"
-              
+           
+              "src/app/css/coreSlider.css",
+              "src/app/css/font-awesome.css",
+              "src/app/css/flexslider.css",
+              "src/app/css/jstarbox.css",
+              "src/app/css/style1.css",
+              "src/app/css/owl.carousel.css",
+                 "src/app/css/bootstrap1.css"
             ],
             "scripts": []
           },
