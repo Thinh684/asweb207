@@ -1,0 +1,50 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <h2>HTML Table</h2>
+  <div class="page-detail" *ngIf="product">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+        </div>
+        <div class="col-6">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Desc</th>
+            </tr>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.desc}}</td>
+            <tr>     
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>  
+  </body>
+  </html>
+            <!-- <img src="{{product.images}}" alt="" class="img-fluid"> -->
