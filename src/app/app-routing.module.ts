@@ -7,13 +7,24 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import {ManagerComponent} from './manager/manager.component';
+import { BannerComponent } from './banner/banner.component';
+import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'product/add', component: ProductAddComponent},
-  {path: 'product', component: ProductListComponent},
-  {path: 'product/:productID',component: ProductDetailComponent},
-  {path: 'Product/edit/:productID', component: ProductEditComponent},
+ {
+    path: "home",
+    component: HomeComponent,
+    children: [
+      { path: "", component: ProductListComponent },
+      { path: "about", component: AboutComponent}
+     
+    ]
+  },
+  // {path: 'banner', component: BannerComponent},
+  // {path: 'product/add', component: ProductAddComponent},
+  // {path: 'product', component: ProductListComponent},
+  // {path: 'product/:productID',component: ProductDetailComponent},
+  // {path: 'Product/edit/:productID', component: ProductEditComponent},
   {path: 'manager', component: ManagerComponent}
   // {path: '**', component: NotFoundComponent}
 ] 

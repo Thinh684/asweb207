@@ -1,17 +1,36 @@
-<h2>Add Product</h2>
-<form class="w-50 mx-auto mt-3">
+<div class="form-add-pro">
+	<h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Add new product</h3>
+	<form>
+		<div class="form-group">
+			<label for="">Name</label>
+			<input type="text" [(ngModel)]="product.name" name="name" class="form-control" id="exampleInputEmail1"  >
+		</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Price</label>
+				<input type="text" class="form-control"  [(ngModel)]="product.price" name="price" id="exampleInputPassword1" >
+    </div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Description</label>
+					<input type="text" class="form-control" [(ngModel)]="product.description" name="description" id="exampleInputPassword1">
+    </div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Link images</label>
+						<input type="text" class="form-control" [(ngModel)]="product.images" name="images" id="exampleInputPassword1">
+    </div>
+						<div class="add-new-btn" style="text-align:center;margin-bottom:10px">
+							<button  class="btn btn-primary" routerLink="/manager">Back</button>
+							<button  class="btn btn-primary" (click)="addProduct()">Add Product</button>
+						</div>
+	</form>
+</div>
+<style>
+	.form-add-pro {
+		width: 50%;
+		margin: 0px auto;
+	}
 
-  <div class="form-group">
-    <label for="">Product Name</label>
-    <input type="text" name="name" class="form-control"placeholder="Product Name" [(ngModel)]="product.name">
-  </div>
-  <div class="form-group">
-    <label for="">Product Price</label>
-  <input type="text" name="price" class="form-control"placeholder="Price" [(ngModel)]="product.price">
-  </div>
-  <div class="form-group">
-    <label for="">Product Desc</label>
-  <input type="text" name="desc" class="form-control"placeholder="Dessc" [(ngModel)]="product.desc">
-  </div>
-  <button type="submit" class="btn btn-primary" (click)="addProduct()">Submit</button>
-</form>
+	.add-new-btn button {
+		width: 150px;
+		margin: 5px;
+	}
+</style>
